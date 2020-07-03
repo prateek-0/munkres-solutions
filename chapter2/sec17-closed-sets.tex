@@ -12,6 +12,15 @@ Show that if $A$ is closed in $Y$ and $Y$ is closed in $X$, then $A$ is closed i
 \subsubsection{Solution}
 From Theorem 17.2 we get that there exists a closed subset $C \subseteq X$ such that $A = C \cap Y$. Since $Y$ is closed in $X$, from Theorem 17.1(2), we get that $A = (C \cap Y) \subseteq X$ is also a closed subset of $X$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 3 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Show that if $U$ is open in $X$ and $A$ is closed in $X$, then $U-A$ is open in $X$, and $A-U$ is closed in $X$.
+\subsubsection{Solution}
+By definition, we have $U$ open in $X \implies X\setminus U$ is closed in $X$ and $A$ closed in $X \implies X\setminus A$ is open in $X$. Since finite intersections of open sets are open, we have that $U-A := U \cap (X\setminus A)$ is open in $X$. Similarly, since arbitrary intersections of closed sets are closed, we have $A-U := A \cap (X\setminus U)$ is closed in $X$.
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{5} % 6
