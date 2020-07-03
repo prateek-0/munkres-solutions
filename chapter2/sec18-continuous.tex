@@ -1,0 +1,14 @@
+\setcounter{section}{17} % 18
+\section{Continuous functions}
+\label{sec-continuous}
+ 
+\setcounter{subsection}{12} % 13
+\subsection{}
+
+\subsubsection{Problem}
+Let $A \subseteq X$; let $f : A \to Y$ be continuous; let $Y$ be Hausdorff. Show that if $f$ may be extended to a continuous function $g : \bar A \to Y$, then $g$ is uniquely determined by $f$.
+
+\subsubsection{Solution}
+Let $g_1, g_2 : \bar A \to Y$, which agree on $A$. We have to show that $g_1 = g_2$. Let
+\[h : \bar A \to Y \times Y,\ h(x) = g_1(x) \times g_2(x) \]
+Consider the diagonal $\Delta = \{ y \times y : y \in Y\}$. Since $Y$ is Hausdorff, $\Delta$ is closed. As $h$ is continuous, $h^{-1}(\Delta)$ is closed. It includes $A$, and hence includes $\bar A$.
