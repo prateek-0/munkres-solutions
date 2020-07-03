@@ -1,1 +1,5 @@
-This is an incomplete collection of solutions to exercises from *Topology*, 2nd edition, by James Munkres. The compiled output is [here](https://github.com/prateek-0/munkres-solutions/blob/master/solutions.pdf).
+This is an incomplete collection of solutions to exercises from *Topology*, 2nd edition, by James Munkres. To compile to PDF, run
+
+```
+pdflatex solutions.tex
+```
