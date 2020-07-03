@@ -1,0 +1,100 @@
+\setcounter{section}{16} % 17
+\section{Closed Sets and Limit Points}
+\label{sec-topspace-closed}
+
+\setcounter{subsection}{5} % 6
+\subsection{}
+
+\subsubsection{Problem}
+Let $A$, $B$, and $A_\alpha$ denote subsets of a space $X$. Prove the following:
+\begin{enumerate}
+ \item If $A \subseteq B$, then $\bar{A} \subseteq \bar{B}$.
+ \item $\overline{A \cup B} = \bar A \cup \bar B$.
+ \item $\overline{\bigcup A_\alpha} \supseteq \bigcup \overline{A_\alpha}$. Give an example where equality fails.
+\end{enumerate}
+\subsubsection{Solution}
+\begin{enumerate}
+ \item We have $A \subseteq B \subseteq \bar B$, and $\bar B$ is a closed set. Hence $\bar A \subseteq \bar B$.
+ \item Clearly $A \cup B \subseteq \bar A \cup \bar B$, and the latter is closed, hence $\overline{A \cup B} \subseteq \bar A \cup \bar B$. Conversely, clearly $\bar A \subseteq \overline{A \cup B}$ and $\bar B \subseteq \overline{A \cup B}$. So $\bar A \cup \bar B \subseteq \overline{A \cup B}$.
+ \item Let $Y = \bigcup A_\alpha$. Then for each $\alpha$, $A_\alpha \subseteq Y$, and so $\overline{A_\alpha} \subseteq \bar Y$. So $\bigcup \overline{A_\alpha} \subseteq \bar Y$.
+ 
+ For an example where equality fails, let $X = \R$ with the standard topology. Treating $\Q$ as an index set, let $A_\alpha = \{\alpha\}$ for $\alpha \in \Q$. Then $\overline{\bigcup A_\alpha} = \bar \Q = \R$. And $\bigcup \overline{A_\alpha} = \Q$.
+ \end{enumerate}
+ 
+\setcounter{subsection}{7} % 8
+\subsection{}
+\subsubsection{Problem}
+Let $A$, $B$, and $A_\alpha$ denote subsets of a space $X$. Determine whether the following equations hold; if an equality fails, determine whether one of the inclusions $\subseteq$ or $\supseteq$ holds.
+\begin{enumerate}
+ \item $\overline{A \cap B} = \bar A \cap \bar B$.
+ \item $\overline{\bigcap A_\alpha} = \bigcap \overline{A_\alpha}$
+ \item $\overline{A \setminus B} = \bar A \setminus \bar B$
+\end{enumerate}
+ 
+\subsubsection{Solution}
+\begin{enumerate}
+ \item We have $\overline{A \cap B} \subseteq \bar A$ and $\overline{A \cap B} \subseteq \bar B$, hence $\overline{A \cap B} \subseteq \bar A \cap \bar B$. The reverse inclusion does not hold, for example let $X = \R$ with the standard topology, $A = (0,1)$, and $B = (1,2)$.
+ 
+ \item The same as the above, taking an index set of size 2.
+ 
+ \item We show that $\bar A \setminus \bar B \subseteq \overline{A \setminus B}$. Let $x \in \bar A \setminus \bar B$. We show that every neighbourhood of $x$ intersects $A \setminus B$. Fix a neighbourhood $U_0$ of $x$ such that $U_0 \subseteq X \setminus \bar B$. Let $U$ be an arbitrary neighbourhood of $x$. Then since $x \in \bar A$, $U \cap U_0$, which is also a neighbourhood of $x$, intersects $A$. Let $y \in U \cap U_0 \cap A$. Then clearly $y \in U \cap (A \setminus B)$, which shows that every neighbourhood of $x$ intersects $A \setminus B$.
+ 
+ The converse, $\overline{A \setminus B} \subseteq \bar A \setminus \bar B$, does not hold. For example, let $X = \R$ with the standard topology, $A = [0,1]$, and $B = (0,1)$. 
+\end{enumerate}
+
+\setcounter{subsection}{8} % 9
+\subsection{}
+\subsubsection{Problem}
+Let $A \subseteq X$ and $B \subseteq Y$. Show that in the space $X \times Y$,
+\[\overline{A \times B} = \bar A \times \bar B \]
+\subsubsection{Solution}
+$A \times B$ is a subset of the closed set $\bar A \times \bar B$, and so $\overline{A \times B} \subseteq \bar A \times \bar B$. Conversely, let $x \times y \in \bar A \times \bar B$. Consider any basis neighbourhood of it in $X \times Y$, $U \times V$. Then $U$ intersects $A$ and $V$ intersects $B$, so $U \times V$ intersects $A \times B$. So $x \times y \in \overline{A \times B}$. 
+
+\setcounter{subsection}{12} % 13
+\subsection{}
+\subsubsection{Problem}
+Show that $X$ is Hausdorff if and only if the diagonal $\Delta = \{x \times x \mid x \in X\}$ is closed in $X \times X$.
+\subsubsection{Solution}
+Let $\T$ be the toplogy on $X$ and let $\Omega = (X \times X) \setminus \Delta$.
+\begin{align*}
+& X \textrm{ is Hausdorff} \\
+\iff& \forall x,y \in X \ (x \neq y \implies \exists U, V \in \T (x \in U, y \in V, U \cap V = \emptyset)) \\
+\iff& \forall (x \times y) \in \Omega \ ( \exists U, V \in \T (x \in U, y \in V, U \cap V = \emptyset)) \\
+\iff& \forall (x \times y) \in \Omega \ ( \exists U, V \in \T ( x \times y \in U \times V \subseteq \Omega)) \\
+\iff& \Omega \textrm{ is open} \\
+\iff& \Delta \textrm{ is closed}
+\end{align*}
+
+\setcounter{subsection}{18} % 19
+\subsection{}
+\subsubsection{Problem}
+If $A \subseteq X$, we define the boundary of $A$ by the equation
+\[\Bd A = \bar A \cap \overline{X \setminus A}\]
+\begin{enumerate}
+\item Show that $\Int A$ and $\Bd A$ are disjoint, and $\bar A = \Int A \cup \Bd A$.
+\item Show that $\Bd A = \emptyset \iff A$ is both open and closed.
+\item Show that $U$ is open $\iff \Bd U = \bar U \setminus U$.
+\item If $U$ is open, is it true that $U = \Int(\bar U)$? Justify your answer.
+\end{enumerate}
+
+\subsubsection{Solution}
+\begin{enumerate}
+\item $X \setminus A$ is a subset of the closed set $X \setminus \Int A$, hence $\overline{X \setminus A} \subseteq X \setminus \Int A$. Thus $\Bd A \subseteq \overline{X \setminus A} \subseteq X \setminus \Int A$. $\Bd A$ and $\Int A$ are disjoint.
+
+Let $x \in \bar A$. If every neighbourhood of $x$ intersects $X \setminus A$, then $x \in \overline{X \setminus A}$, and hence $x \in \Bd A$. Otherwise, there is some neighbourhood of $x$ which does not intersects $X \setminus A$, that is, it is a subset of $A$, and so $x \in \Int A$. Thus $\bar A = \Int A \cup \Bd A$.
+
+\item If $\Bd A = \emptyset$, then $\bar A$ and $\overline{X \setminus A}$ form a partition of $X$. Thus $A = \bar A$ and $X \setminus A = \overline{X \setminus A}$. Both $A$ and $X \setminus A$ are closed.
+
+Conversely, if $A$ is both open and closed, then $X \setminus A$ is closed as well, and so $\Bd A = A \cap (X \setminus A) = \emptyset$.
+
+\item For all $A \subseteq X$, we know that $\Int A$ and $\Bd A$ form a partition of $\bar A$, and hence $\Bd A = \bar A \setminus \Int A$. Then, noting that $A$ and $\Int A$ are always subsets of $\bar A$,
+\begin{align*}
+& U \textrm{ is open} \\
+\iff& \Int U = U \\
+\iff& \bar U \setminus \Int U = \bar U \setminus U \\
+\iff& \Bd U = \bar U \setminus U
+\end{align*}
+
+\item No. Let $X = \R$ with the standard topology, and let $U = (0,1) \cup (1,2)$.
+\end{enumerate}
+
