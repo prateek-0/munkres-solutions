@@ -1,0 +1,14 @@
+\setcounter{section}{18} % 19
+\section{The Product Topology}
+\label{sec-topspace-product}
+ 
+\setcounter{subsection}{6} % 7
+\subsection{}
+
+\subsubsection{Problem}
+Let $\R^\infty$ be the subset of $\R^\omega$ consisting of all sequences that are ``eventually zero'', that is, all sequences $(x_1, x_2, \ldots)$ such that $x_i \neq 0$ for only finitely many values of $i$. What is the closure of $\R^\infty$ in $\R^\omega$ in the box and product topologies? Justify your answer.
+
+\subsubsection{Solution}
+In the product topology, the closure of $\R^\infty$ is $\R^\omega$. Consider any $x \in \R^\omega$, and basis neighbourhood of it $\prod U_i$, with $U_i = \R$ for all but finitely many $i$. Thus by modifying $x$ to be $0$ in all but finitely many components, one gets a point in $\R^\infty \cap \prod U_i$. Every basis neighbourhood of $x$ intersects $\R^\infty$, and so $x \in \overline{\R^\infty}$.
+
+In the box topology, $\R^\infty$ is closed, and so its closure is itself. To show this, we show that its complement is open. The complement consists of all points in $\R^\omega$ which are $0$ in infinitely many components. Let $x \in \R^\omega \setminus \R^\infty$. Consider the basis neighbourhood of $x$, $\prod U_i$ where $U_i = \R$ if $x_i = 0$ and $U_i = \R \setminus \{0\}$ otherwise. Then $\prod U_i \subseteq \R^\omega \setminus \R^\infty$. This holds for all $x \in \R^\omega \setminus \R^\infty$, so $\R^\omega \setminus \R^\infty$ is open.
