@@ -2,4 +2,4 @@
 *.aux
 *.synctex.gz
 .DS_Store
-solutions.pdf
+*.pdf
