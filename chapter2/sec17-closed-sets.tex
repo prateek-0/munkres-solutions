@@ -17,6 +17,18 @@ From Theorem 17.2 we get that there exists a closed subset $C \subseteq X$ such 
 \subsection{}
 
 \subsubsection{Problem}
+Show that if $A$ is closed in $X$ and $B$ is closed in $Y$, then $A \times B$ is closed in $X \times Y$.
+\subsubsection{Solution}
+We observe the following identity:
+\[ A \times B = (X \times Y) \setminus ((X\setminus A) \times Y \cup X \times (Y \setminus B)) \]
+Hence the problem reduces to showing that $((X\setminus A) \times Y \cup X \times (Y \setminus B))$ is open in $X \times Y$.
+By definition of closed sets, we get that $A$ closed in $X \implies X\setminus A$ is open in $X$ and $B$ closed in $Y \implies Y\setminus B$ is open in $Y$. Hence, $(X\setminus A) \times Y$ and $X \times (Y \setminus B)$ are open in $X \times Y$ and hence $((X\setminus A) \times Y \cup X \times (Y \setminus B))$ is an open subset of $X \times Y$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
 Show that if $U$ is open in $X$ and $A$ is closed in $X$, then $U-A$ is open in $X$, and $A-U$ is closed in $X$.
 \subsubsection{Solution}
 By definition, we have $U$ open in $X \implies X\setminus U$ is closed in $X$ and $A$ closed in $X \implies X\setminus A$ is open in $X$. Since finite intersections of open sets are open, we have that $U-A := U \cap (X\setminus A)$ is open in $X$. Similarly, since arbitrary intersections of closed sets are closed, we have $A-U := A \cap (X\setminus U)$ is closed in $X$.
