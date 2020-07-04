@@ -58,3 +58,19 @@ In the \emph{uniform} topology,
 \[d(x_n,\bfzero) = d(y_n,\bfzero) = d(z_n, \bfzero) = \tfrac1n\]
 and so $x$, $y$, and $z$ converge to $\bfzero$. $d(w_n, \bfzero) = 1$, and so $w$ is not eventually in the ball $B(\bfzero, \frac12)$. $w$ does not converge to $\bfzero$.
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 5 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{4} % 5
+\subsection{}
+
+\subsubsection{Problem}
+Let $\R^\infty$ be the subset of $\R^\omega$ consisting of all sequences which are eventually $0$. What is the closure of $\R^\infty$ in $\R^\omega$ in the uniform topology? Justify your answer.
+
+\subsubsection{Solution}
+Let $C \subseteq \R^\omega$ be the set of all sequences which converge to $0$. We show that the closure of $\R^\infty$ in $\R^\omega$ in the uniform topology is $C$. Let $d$ be the uniform metric.
+
+First we show that $C \subseteq \overline{R^\infty}$. Let $x \in C$. It suffices to show that every ball centred at $x$ intersects $\R^\infty$. Consider a ball $B(x, \epsilon)$. Let $N$ be such that for all $n \geq N$, $|x_n| < \epsilon/2$. Let $y \in \R^\infty$, such that $y_n = x_n$ for $n < N$ and $y_n = 0$ otherwise. Then $d(x,y) < \epsilon$, so $B(x, \epsilon)$ intersects $\R^\infty$. So $x \in \overline{\R^\infty}$.
+
+Now we show that $\overline{R^\infty} \subseteq C$. Let $x \in \overline{R^\infty}$. We need to show that $x$ converges to $0$. Let $\epsilon > 0$. Then $B(x, \epsilon)$ intersects $\overline{\R^\infty}$. Let $y$ be an element in the intersection. $y$ is eventually zero, and the distance between $x$ and $y$ in the uniform metric is at most $\epsilon$, therefore $x$ is eventually in $(-\epsilon, \epsilon)$. As this holds for every $\epsilon$, $x$ converges to $0$.
+
