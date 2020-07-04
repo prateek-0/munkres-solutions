@@ -1,0 +1,60 @@
+\setcounter{section}{19} % 20
+\section{The Metric Topology}
+\label{sec-topspace-metric}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{3} % 4
+\subsection{}
+
+\subsubsection{Problem}
+
+Consider the product, uniform, and box topologies on $\R^\omega$.
+\begin{enumerate}
+\item In which topologies are the following functions from $\R$ to $\R^\omega$ continuous?
+\begin{align*}
+f(t) &= (t, 2t, 3t, \ldots) \\
+g(t) &= (t, t, t, \ldots) \\
+h(t) &= (t, \tfrac12 t, \tfrac13 t, \ldots)
+\end{align*}
+
+\item In which topologies do the following sequences converge?
+\begin{align*}
+w_1 &= (1,1,1,1,\ldots),&  x_1 &=(1,1,1,1,\ldots), \\
+w_2 &= (0,2,2,2,\ldots),&  x_2 &=(0,\tfrac12,\tfrac12,\tfrac12,\ldots), \\
+w_3 &= (0,0,3,3, \ldots),& x_3 &=(0,0,\tfrac13,\tfrac13,\ldots), \\
+&\cdots & &\cdots \\
+y_1 &= (1,0,0,0,\ldots),& z_1 &=(1,1,0,0,\ldots), \\
+y_2 &= (\tfrac12,\tfrac12,0,0,\ldots),& z_2 &=(\tfrac12,\tfrac12,0,0,\ldots), \\
+y_3 &= (\tfrac13,\tfrac13,\tfrac13,0,\ldots),& z_3 &=(\tfrac13,\tfrac13,0,0,\ldots), \\
+&\cdots & &\cdots
+\end{align*}
+\end{enumerate}
+
+\subsubsection{Solution}
+
+\begin{enumerate}
+\item In the product topology, $f$, $g$, and $h$ are all continuous, as they are componentwise continuous.
+
+In the box topology, none of them is continuous: Consider the open set $U \subseteq \R^\omega$ defined by
+\[U = \prod_{n=1}^\infty \left(-\tfrac{1}{n^2}, \tfrac{1}{n^2} \right)\]
+Then $f^{-1}(U) = g^{-1}(U) = h^{-1}(U) = \{0\}$, which is not open in $\R$.
+
+Now let us consider the uniform topology. Let $d$ be the uniform metric on $\R^\omega$. We show that $g$ and $h$ are continuous, and the same argument works for both. Let $q \in \{g,h\}$. Let $t \in \R$ and let $U$ be a neighbourhood of $q(t)$. Let $\epsilon > 0$ such that $B(q(t), \epsilon) \subseteq U$. Then $q$ maps the open set $(t-\epsilon, t+\epsilon)$ into $B(q(t), \epsilon)$. So $q$ is continuous.
+
+$f$ is not continuous in the uniform topology: Consider the ball in $\R^\omega$ of radius $\frac12$ around the origin. Its inverse image under $f$ is $\{0\}$, which is not open.
+
+\item In this problem, if $x \in \R^\omega$, we use $x[1]$, $x[2]$, etc to refer to its components, to make it easier to refer to, for eample, $w_3[5]$. Let $\bfzero$ be the point in $\R^\omega$ with all components $0$.
+
+In the \emph{product} topology, all four sequences converge to $\bfzero$. It's easy to see that for all basis neighbourhoods $U$ of $\bfzero$, all four sequences have only finitely many elements outside $U$. Further, since $\R^\omega$ is Hausdorff in the product topology, the sequences don't converge to any point other than $\bfzero$. Thus even in the uniform or box topologies (being finer than the product topology), the sequences cannot converge to any point other than $\bfzero$.
+
+In the \emph{box} topology, $z$ converges to $\bfzero$, since given any box neighbourhood $U = \prod_{n=1}^\infty U_n$, consider $U_1 \cap U_2$, which is a neighbourhood of $0$ in $\R$. For all large enough $n$, $1/n \in U_1 \cap U_2$, and hence $z_n \in U$.
+
+In the box topology, none of the other sequences converge. Consider the box neighbourhood of $\bfzero$,
+\[U = \prod_{n=1}^\infty \left(-\tfrac{1}{n^2}, \tfrac{1}{n^2} \right)\]
+Then for all $n$, no $x_n$, $y_n$, or $z_n$ is in $U$: $w_n[n] = n$ and $x_n[n] = y_n[n] = \frac1n$, neither of which is in $(-\frac{1}{n^2}, \frac{1}{n^2})$.
+
+In the \emph{uniform} topology,
+\[d(x_n,\bfzero) = d(y_n,\bfzero) = d(z_n, \bfzero) = \tfrac1n\]
+and so $x$, $y$, and $z$ converge to $\bfzero$. $d(w_n, \bfzero) = 1$, and so $w$ is not eventually in the ball $B(\bfzero, \frac12)$. $w$ does not converge to $\bfzero$.
+\end{enumerate}
