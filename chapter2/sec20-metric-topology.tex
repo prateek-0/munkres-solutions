@@ -74,3 +74,42 @@ First we show that $C \subseteq \overline{R^\infty}$. Let $x \in C$. It suffices
 
 Now we show that $\overline{R^\infty} \subseteq C$. Let $x \in \overline{R^\infty}$. We need to show that $x$ converges to $0$. Let $\epsilon > 0$. Then $B(x, \epsilon)$ intersects $\overline{\R^\infty}$. Let $y$ be an element in the intersection. $y$ is eventually zero, and the distance between $x$ and $y$ in the uniform metric is at most $\epsilon$, therefore $x$ is eventually in $(-\epsilon, \epsilon)$. As this holds for every $\epsilon$, $x$ converges to $0$.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{7} % 8
+\subsection{}
+
+\subsubsection{Problem}
+Let $X$ be the subset of $\R^\omega$ consisting of all sequences $x$ such that $\sum x_i^2$ converges. Then the formula
+\[d(x,y) = \sqrt{\sum_{i=1}^\infty (x_i - y_i)^2}\]
+defines a metric on $X$ (see Exercise 10). On $X$ we have the three topologies it inherits from the box, uniform, and product topologies on $\R^\omega$. We also have the topology given by the metric $d$, which we call the $\ell^2$-topology.
+\begin{enumerate}
+\item Show that on $X$, we have the inclusions
+\[\textrm{box topology} \supseteq \ell^2 \textrm { topology} \supseteq \textrm{ uniform topology}\]
+\item The set $\R^\infty$ of all sequences that are eventually zero is a subset of $X$. Show that the four topologies that $\R^\infty$ inherits as a subspace of $X$ are all distinct.
+\item The set
+\[H = \prod_{n \in \Z^+} [0, \tfrac1n]\]
+is a subset of $X$; it is called the \emph{Hilbert cube}. Compare the four topologies $H$ inherits as a subspace of $X$. Compare the four topologies $H$ inherits as a subspace of $X$.
+\end{enumerate}
+
+\subsubsection{Solution}
+We use $d_1$ for the uniform metric and $d_2$ for the $\ell^2$ metric on $X$. Likewise we use $B_1$ and $B_2$ for the corresponding balls in $X$.
+\begin{enumerate}
+\item First we show that the $\ell^2$ topology is finer than the uniform topology. It is easy to see that for all $x, y \in X$, $d_1(x,y) \leq d_2(x,y)$.
+Let $U \subseteq X$ be open in the uniform topology. We show that $U$ is open in the $\ell^2$ topology. Let $x \in U$. Then there is an $\epsilon > 0$ such that $B_1(x, \epsilon) \subseteq U$. It follows that $x \in B_2(x, \epsilon) \subseteq B_1(x, \epsilon) \subseteq U$. $U$ is open in the $\ell^2$ topology.
+
+Now we show that the box topology is finer than the $\ell^2$ topology. Let $U \subseteq X$ be open in the $\ell^2$ topology. Let $x \in U$. There exists $\epsilon > 0$ such that $B_2(x, \epsilon) \subseteq U$. Consider the box neighbourhood of $x$, given by
+\[V = X \cap \prod_{n \in \Z^+} \left(x_n-\tfrac{\epsilon}{2^n},x_n+\tfrac{\epsilon}{2^n}  \right)\]
+We show that $V \subseteq B_2(x, \epsilon)$. If $y \in V$, then
+
+\[
+d_2(x,y) = \sqrt{\sum_{i=1}^\infty (x_i - y_i)^2} 
+\leq \sqrt{\sum_{i=1}^\infty \frac{\epsilon^2}{2^{2n}}} 
+= \epsilon\sqrt{\sum_{i=1}^\infty \frac{1}{4^n}} 
+= \frac{\epsilon}{\sqrt 3}
+< \epsilon
+\]
+Thus $x \in V \subseteq B_2(x, \epsilon) \subseteq U$. $U$ is open in the box topology.
+\end{enumerate}
+
