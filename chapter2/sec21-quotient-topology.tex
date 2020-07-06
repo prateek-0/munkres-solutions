@@ -1,0 +1,22 @@
+\setcounter{section}{20} % 21
+\section{The Quotient Topology}
+\label{sec-topspace-quotient}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{1} % 2
+\subsection{}
+
+\subsubsection{Problem}
+\begin{enumerate}
+\item Let $p : X \to Y$ be a continuous map. Show that if there is a continuous map $f : Y \to X$ such that $p \circ f$ equals the identity map of $Y$, then $p$ is a quotient map.
+\item If $ A \subseteq X$, a retraction of $X$ onto $A$ is a continuous map $r : X \to A$ such that $r(a) = a$ for each $a \in A$. Show that every retraction is a quotient map.
+\end{enumerate}
+
+\subsubsection{Solution}
+\begin{enumerate}
+\item $p$ is given to be continuous, and for every $y \in Y$, $p(f(y)) = y$, so $p$ is surjective. Let $i_Y$ be the identity map on $Y$. Consider $U \subseteq Y$, such that $p^{-1}(U)$ is open. $f^{-1}(p^{-1}(U))$ is open, because $f$ is continuous. But
+\[f^{-1}(p^{-1}(U)) = (p \circ f)^{-1}(U) = i_Y^{-1}(U) = U\]
+So $U$ is open whenever $p^{-1}(U)$ is open. $p$ is a quotient map.
+\item Use the inclusion map from $A$ to $X$ along with the above.
+\end{enumerate}
