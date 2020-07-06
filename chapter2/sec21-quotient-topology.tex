@@ -20,3 +20,18 @@
 So $U$ is open whenever $p^{-1}(U)$ is open. $p$ is a quotient map.
 \item Use the inclusion map from $A$ to $X$ along with the above.
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 3 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{2} % 3
+\subsection{}
+
+\subsubsection{Problem}
+Let $\pi_1 : \R \times \R \to \R$ be the projection on the first coordinate. Let $A$ be the subspace of $\R \times \R$ consisting of all points $x \times y$ for which either $x \geq 0$ or $y = 0$ (or both). Let $q : A \to \R$ be obtained by restricting $\pi_1$. Show that $q$ is a quotient map that is neither open nor closed.
+
+\subsubsection{Solution}
+Consider $f : \R \to A$ given by $f(x) = x \times 0$. Then $q \circ f$ is the identity on $\R$, so $f$ is a quotient map.
+
+Consider $U = (-1, 1) \times (1,2)$, which is open in $\R \times \R$. $U \cap A = [0,1) \times (1,2)$ is open in $A$. $q(U) = [0,1)$ is not open in $\R$, so $q$ is not an open map.
+
+Consider $C = \{ x \times y : x \times y \in A, xy=1\}$. $C$ is closed in $A$, but $q(C) = (0, \infty)$ is not closed in $\R$. So $q$ is not a closed map.
