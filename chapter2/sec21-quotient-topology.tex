@@ -35,3 +35,28 @@ Consider $f : \R \to A$ given by $f(x) = x \times 0$. Then $q \circ f$ is the id
 Consider $U = (-1, 1) \times (1,2)$, which is open in $\R \times \R$. $U \cap A = [0,1) \times (1,2)$ is open in $A$. $q(U) = [0,1)$ is not open in $\R$, so $q$ is not an open map.
 
 Consider $C = \{ x \times y : x \times y \in A, xy=1\}$. $C$ is closed in $A$, but $q(C) = (0, \infty)$ is not closed in $\R$. So $q$ is not a closed map.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{3} % 4
+\subsection{}
+
+\subsubsection{Problem}
+\begin{enumerate}
+\item Define an equivalence relation on the plane $X = \R^2$ as follows:
+\[x_0 \times y_0 \sim x_1 \times y_1 \textrm{ if } x_0 + y_0^2 = x_1 + y_1^2\]
+Let $X^*$ be the corresponding quotient space. It is homeomorphic to a familiar space; what is it? [Hint: Set $g(x \times y) = x + y^2$]
+\item Repeat the above for the equivalence relation
+\[x_0 \times y_0 \sim x_1 \times y_1 \textrm{ if } x_0^2 + y_0^2 = x_1^2 + y_1^2\]
+\end{enumerate}
+
+\subsubsection{Problem}
+\begin{enumerate}
+\item Let $g : \R^2 \to \R$, given by $g(x \times y) = x + y^2$. $g$ is continuous. Let $f : \R \to \R^2$ given by $f(x) = x \times 0$. $f$ is also continuous, and $g \circ f$ is the identity function on $\R$. So $g$ is a quotient map.
+
+By Corollary 22.3, $g$ induces a homeomorphism from $X^*$ to $\R$.
+
+\item Let $Z$ be $[0,\infty)$ as a subspace of $\R$. Let $g : \R^2 \to Z$, given by $g(x \times y) = x^2 + y^2$. $g$ is continuous. Let $f : \R \to \R^2$ given by $f(x) = \sqrt{x} \times 0$. $f$ is also continuous, and $g \circ f$ is the identity function on $Z$. So $g$ is a quotient map.
+
+By Corollary 22.3, $g$ induces a homeomorphism from $X^*$ to $Z$.
+\end{enumerate}
