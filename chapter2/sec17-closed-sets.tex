@@ -106,6 +106,26 @@ Let $\T$ be the toplogy on $X$ and let $\Omega = (X \times X) \setminus \Delta$.
 \iff& \Delta \textrm{ is closed}
 \end{align*}
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 15 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{14} % 15
+\subsection{}
+\subsubsection{Problem}
+Show the $T_1$ axiom is equivalent to the condition that for each pair of \emph{distinct} points of $X$, each has a neighbourhood not containing the other.
+
+\subsubsection{Solution}
+Consider the following  statements:
+\begin{enumerate}
+\item\label{t1} ($X$ satisfies $T_1$ axiom) All finite-point subsets of $X$ are closed in $X$.
+\item\label{1t1} All singleton subsets of $X$ are closed in $X$.
+\item\label{nbds} For each pair of distinct points in $X$, each has a neighbourhood not containing the other.
+\end{enumerate}
+For this problem, we need to show that $\ref{t1} \iff \ref{nbds}$. We will show that $\ref{t1} \iff \ref{1t1}$ and $\ref{1t1} \iff \ref{nbds}$.
+Clearly, singleton sets are finite which gives us that $\ref{t1} \implies \ref{1t1}$. Conversely, given a finite subset $\set{x_1, x_2 \dots, x_n} \subseteq X$, each of $\set{x_i}, i \in \N_n := \set{1, 2, \dots, n}$ is closed, which implies that $\set{x_1, x_2, \dots, x_n} = \set{x_1} \cup \set{x_2} \cup \dots \cup \set{x_n}$ is also closed, being a finite union of closed sets. Hence $\ref{1t1} \implies \ref{t1}$.
+\medskip
+
+To show that $\ref{1t1} \implies \ref{nbds}$, let $x,y \in X, x \neq y$. $\ref{1t1}$ implies that $\set{x}, \set{y}$ are closed sets. Hence $X\setminus\set{x}, X\setminus\set{y}$ are open sets containing $y, x$ respectively. Also, $x \notin X\setminus\set{x}, y \notin X\setminus\set{y}$. Since $x, y$ were arbitrary points in $X$, we see that \ref{nbds} holds. Conversely, let $x_0 \in X$. \ref{nbds} implies that for all $y \in X, y \neq x_0$ there exists a neighbourhood $U_y$ of $y$ which does not contain $x_0$. Let $U := \bigcup_{y \in X\setminus\set{x_0}}U_y$. Then $U$ is open, being the union of open sets $U_y$ for $y \in X\setminus\set{x_0}$. Also, $U$ does not contain $x_0$, since $x_0 \notin U_y$ for all $y \in X\setminus\set{x_0}$. Finally for any $y \in X, y \neq x_0$ we have $y \in U_y \subseteq U$. Hence $U = X\setminus\set{x_0}$ is an open set which implies that $\set{x_0}$ is closed. Since $x_0 \in X$ was arbitrary, we conclude that $\ref{nbds} \implies \ref{1t1}$. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 19 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{18} % 19
