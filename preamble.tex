@@ -14,5 +14,9 @@
 
 \renewcommand{\thesection}{\S \arabic{section}}
 \renewcommand{\thesubsection}{Problem \arabic{subsection}}
- 
+
+% To get enum labels like (a), (b), etc.
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand\labelenumi{\theenumi}
+
 \newcommand{\set}[1]{\ensuremath{\left\{ #1 \right\}}}
