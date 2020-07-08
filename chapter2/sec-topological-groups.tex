@@ -1,0 +1,21 @@
+\section*{Supplementary Exercises: Topological Groups} 
+\addcontentsline{toc}{section}{\numberline {\S *}Supplementary Exercises: Topological Groups}
+\label{sec-topspace-groups}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 3 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{2} % 3
+\subsection{}
+
+\subsubsection{Problem}
+Let $H$ be a subspace of $G$. Show that if $H$ is also a subgroup of $G$, then both $H$ and $\bar H$ are topological groups.
+
+\subsubsection{Solution}
+Since $H$ is a subspace of a $T_1$ space, $H$ is $T_1$ too. The multiplication and inverse functions on $H$ are obtained by restricting the domain and codomain of the ones on $G$, and so are continuous. So $H$ is a topological group. In particular, every subgroup of $G$ with the subspace topology is a topological group.
+
+Let $m : G \times G \to G$ and $i : G \to G$ be the multiplication and inverse functions respectively. Using basic group properties, $i(H) = H$ and $m(H \times H) = H$. Using the continuity of $m$ and $i$,
+\begin{itemize}
+\item $i(\bar H) \subseteq \overline{i(H)} = \bar H$.
+\item $m(\bar H \times \bar H) = m(\overline{H \times H}) \subseteq \overline{m(H \times H)} = \bar H$.
+\end{itemize}
+$\bar H$ contains the identity and is closed under inverses and multiplication, so $\bar H$ is a subgroup of $G$. Thus $\bar H$ is a topological group.
