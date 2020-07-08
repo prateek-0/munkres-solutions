@@ -19,3 +19,54 @@ Let $m : G \times G \to G$ and $i : G \to G$ be the multiplication and inverse f
 \item $m(\bar H \times \bar H) = m(\overline{H \times H}) \subseteq \overline{m(H \times H)} = \bar H$.
 \end{itemize}
 $\bar H$ contains the identity and is closed under inverses and multiplication, so $\bar H$ is a subgroup of $G$. Thus $\bar H$ is a topological group.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 5 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{4} % 5
+\subsection{}
+
+\subsubsection{Problem}
+Let $H$ be a subgroup of $G$. If $x \in G$, define $xH = \{xh : h \in H\}$; this set is called a \emph{left coset} of $H$ in $G$. Let $G/H$ be the collection of left cosets of $H$ in $G$; it is a partition of $G$. Give $G/H$ the quotient topology.
+\begin{enumerate}
+\item Show that if $\alpha \in G$, the map $f_\alpha$ of the preceding exercise induces a homeomorphism of $G/H$ carrying $xH$ to $(\alpha x)H$. Conclude that $G/H$ is a homogeneous space.
+\item Show that if $H$ is a closed set in the topology of $G$, then one-point sets are closed in $G/H$.
+\item Show that the quotient map $p : G \to G/H$ is open.
+\item Show that if $H$ is closed in the topology of $G$ and is a normal subgroup of $G$, then $G/H$ is a topological group.
+\end{enumerate}
+
+\subsubsection{Solution}
+\begin{enumerate}
+\item $f_\alpha : G \to G$ given by $f_\alpha(x) = \alpha x$ is an homeomorphism from $G$ to $G$.
+
+\begin{center}
+\begin{tikzcd}
+G \arrow[r, "f_\alpha"] \arrow[d, "p"] & G \arrow[d, "p"] \\
+G/H \arrow[r, dashed] & G/H
+\end{tikzcd}
+\end{center}
+We use Theorem 22.2. $p : G \to G/H$ is a quotient map, and $p \circ f_\alpha$ is a map which is constant on each $p^{-1}(\{y\})$. This is because if $g_1,g_2 \in p^{-1}(\{y\})$, then $g_1 = xh_1$ and $g_2 = xh_2$ for some $x \in G$. Then 
+\[p(f_\alpha(g_1)) = p(\alpha x h_1) = \alpha x H = p(\alpha x h_2) = p(f_\alpha(g_2))\]
+Note that $p \circ f_\alpha$ is a quotient map, being the composite of a quotient map and a homeomorphism. From Theorem 22.2, a map from $G/H$ to $G/H$ which maps $xH$ to $\alpha xH$ is induced, which is a quotient map too. It's easy to see that this is a bijection, with the inverse given by a similar map which maps $xH$ to $\alpha^{-1} xH$. Being a bijective quotient map, it is a homeomorphism.
+
+\item If $H$ is closed, so is every $xH$, since left-multiplication by $x$ is a homeomorphism from $G$ to $G$. Thus every one-point set in $G/H$ is closed.
+
+\item Let $U \subseteq G$ be open. We need to show that $p(U)$ is open, which is equivalent to $p^{-1}(p(U))$ being open.
+\begin{align*}
+p^{-1}(p(U)) &= p^{-1}(\{p(u) : u \in U \}) \\
+&= p^{-1}(\{uH : u \in U \}) \\
+&= \bigcup_{u \in U} uH \\
+&= \{uh : u \in U, h \in H \} \\
+&= \bigcup_{h \in H} Uh
+\end{align*}
+Since right-multiplication by $h$ is a homeomorphism, every $Uh$ is open, and hence their union is open.
+
+\item Since $H$ is closed, $G/H$ is $T_1$. Consider the map $p \times p : G \times G \to G/H \times G/H$. Being the product of two open maps, it is an open map, and hence a quotient map. Consider $f : G \times G \to G$ given by $f(x \times y) = xy^{-1}$. We know that $f$ is continuous. Consider $f_H : G/H \times G/H \to G/H$ also given by $f_H(x \times y) = xy^{-1}$, with the operations in the group $G/H$. We need to show that $f_H$ is continuous. From basic group theory, the following diagram commutes:
+\begin{center}
+\begin{tikzcd}
+G\times G \arrow[r, "f"] \arrow[d, "p \times p"] & G \arrow[d, "p"] \\
+G/H \times G/H \arrow[r, "f_H"] & G/H
+\end{tikzcd}
+\end{center}
+We apply Theorem 22.2, using that $p \times p$ is a quotient map and that $p \circ f$ is continuous. Thus $f_H$ is continuous. $G/H$ is a topological group.
+
+\end{enumerate}
