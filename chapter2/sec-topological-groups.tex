@@ -70,3 +70,29 @@ G/H \times G/H \arrow[r, "f_H"] & G/H
 We apply Theorem 22.2, using that $p \times p$ is a quotient map and that $p \circ f$ is continuous. Thus $f_H$ is continuous. $G/H$ is a topological group.
 
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 7 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{6} % 7
+\subsection{}
+
+\subsubsection{Problem}
+If $A$ and $B$ are subsets of $G$, let $AB$ denote the set of points $ab$ for $a \in A$ and $b \in B$. Let $A^{-1}$ denote the set of all points $a^{-1}$, for $a \in A$.
+\begin{enumerate}
+\item A neighbourhood $V$ of the identity element is said to be \emph{symmetric} if $V = V^{-1}$. If $U$ is a neighbourhood of $e$, show that there is a symmetric neighbourhood $V$ of $e$ such that $VV \subseteq U$.
+\item Show that $G$ is Hausdorff. In fact, show that if $x \neq y$, there is a neighbourhood $V$ of $e$ such that $Vx$ and $Vy$ are disjoint.
+\item \label{topgroup-p7-c} Show that $G$ satisfies the following separation axiom, called the \emph{regularity axiom}: Given a closed set $A$ and a point $x$ not in $A$, there exist disjoint open sets including $A$ and containing $x$ respectively. [Hint: There is a neighbourhood $V$ of $e$ such that $Vx$ and $VA$ are disjoint.]
+\item  Let $H$ be a subgroup of $G$ that is closed in the topology of $G$; let $p : G \to G/H$ be the quotient map. Show that $G/H$ satisfies the regularity axiom. [Hint: Examine the proof of \ref{topgroup-p7-c} when $A$ is saturated.]
+\end{enumerate}
+
+\subsubsection{Solution}
+\begin{enumerate}
+\item Consider $m : G \times G \to G$, the multiplication function. $m^{-1}(U)$ is open in $G$ and contains $e \times e$, so there exist $V_1$, $V_2$ open in $G$ such that $e \times e \in V_1 \times V_2 \subseteq m^{-1}(U)$. Let $V = V_1 \cap V_2 \cap V_1^{-1} \cap V_2^{-1}$. Since the inverse function is a homeomorphism from $G$ to $G$, $V_1^{-1}$ and $V_2^{-1}$ are open. $V$ is symmetric, open, and contains $e$. $VV \subseteq V_1V_2 \subseteq U$.
+\item Suppose $x, y \in G$ are distinct. Then $G \setminus \{xy^{-1}\}$ is a neighbourhood of the identity $e$, so there exists a symmetric neighbourhood $V$ of $e$ such that $VV \subseteq G \setminus \{xy^{-1}\}$. Then $Vx$ and $Vy$ are open, because for any $v_1, v_2 \in V$, $v_1x \neq v_2y$, as $xy^{-1} \neq v_2v_1^{-1}$. Since right-multiplication by a given element is a homeomorphism of $G$ to itself, $Vx$ and $Vy$ are open. They contain $x$ and $y$ respectively, because $e \in V$.
+\item The proof is similar to the above. $Ax^{-1}$ is closed, so there exists a symmetric neighbourhood $V$ of $e$ such that $VV \subseteq G \setminus Ax^{-1}$. Then $VA$ and $Vx$ are disjoint, because for all $v_1, v_2 \in V$ and $a \in A$, $v_1a \neq v_2x$, as $ax^{-1} \neq v_2v_1^{-1}$. $Vx$ is open, and $VA = \bigcup_{a \in A} Va$ is open too. We have $x \in Vx$ and $A \subseteq VA$, because $e \in V$.
+
+\item Consider $y \in G/H$ and $B \subseteq G/H$ such that $y \notin B$ and $B$ is closed. Then $p^{-1}(\{y\})$ is a coset $xH$ for some $x \in G$, and $p^{-1}(B)$ is a union of cosets, say $AH$ for some $A \subseteq G$. Since $p$ is a quotient map, $AH$ is closed. $xH$ and $AH$ are disjoint. In particular, $e \notin AHx^{-1}$, and $AHx^{-1}$ is closed.
+
+Thus there is a symmetric neighbourhood $V$ of $e$ such that $VV \subseteq G \setminus AHx^{-1}$. Then $VAH$ and $VxH$ are disjoint, because for all $v_1, v_2 \in V$, $a \in A$, and $h_1, h_2 \in H$, $v_1ah_1 \neq v_2xh_2$, as $ah_1h_2^{-1}x^{-1} \neq v_2v_1^{-1}$. $VAH$ is open, because it is $\bigcup_{q \in AH} Vq$, and similarly $VxH$ is open too. $AH \subseteq VAH$ and $xH \subseteq VxH$, because $e \in V$. Both $VAH$ and $VxH$ are unions of cosets, hence are saturated with respect to $p$. So their images $p(VAH)$ and $p(VxH)$ are open in $G/H$, disjoint, and include $A$ and $\{y\}$ respectively.
+\end{enumerate}
+
