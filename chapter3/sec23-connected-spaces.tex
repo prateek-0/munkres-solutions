@@ -23,3 +23,25 @@ Determine whether or not $\R^\omega$ is connected in the uniform topology.
 
 \subsubsection{Solution}
 $\R^\omega$ in the uniform topology is not connected. Let $A, B \subseteq \R^\omega$ be the set of bounded and unbounded sequences respectively. $A$ and $B$ are nonempty, disjoint, and their union is $\R^\omega$. Let $d$ be the uniform metric. Then for all $x \in A$, $B(x, \frac12) \subseteq A$. And similarly for all $x \in B$, $B(x, \frac12) \subseteq B$. Thus $A$ and $B$ are open.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 9 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{8} % 9
+\subsection{}
+
+\subsubsection{Problem}
+Let $A$ be a proper subset of $X$, and let $B$ be a proper subset of $Y$. If $X$ and $Y$ are connected, show that
+\[(X \times Y) \setminus (A \times B)\]
+is connected.
+
+\subsubsection{Solution}
+Let $W = (X \times Y) \setminus (A \times B)$. Fix $x_0 \in X \setminus A$, and $y_0 \in Y \setminus B$. As subspaces of $W$, $\{x_0\} \times Y$ and $X \times \{y_0\}$ are homeomorphic to $Y$ and $X$ respectively, and so both are connected.  They have a point $x_0 \times y_0$ in common. So their union
+\[Z = (\{x_0\} \times Y) \cup (X \times \{y_0\})\]
+is connected as well. For any $x \times y \in W$, define the subspace of $W$, $T_{x \times y}$ as follows:
+\[T_{x \times y} =
+\begin{cases}
+\{x\} \times Y &\textrm{, if } x \notin A \\
+X \times \{y\} &\textrm{, otherwise}
+\end{cases}
+\]
+$T_{x \times y}$ is indeed a subspace of $W$, because $x \notin A$ or $y \notin B$. $T_{x \times y}$ is homeomorphic to $X$ or $Y$, and so is connected.  Every $T_{x \times y}$ intersects $Z$, in $x \times y_0$ or $x_0 \times y$. Using Problem 3, the union of $Z$ with all the $T_{x\times y}$ is connected. This union is $W$, since every $x \times y$ in $W$ is in $T_{x \times y}$. Thus $W$ is connected.
