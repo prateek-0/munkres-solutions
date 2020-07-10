@@ -1,0 +1,25 @@
+\setcounter{section}{22} % 23
+\section{Connected Spaces}
+\label{sec-connected}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{5} % 6
+\subsection{}
+
+\subsubsection{Problem}
+Let $A \subseteq X$. Show that if $C$ is a connected subspace of $X$ that intersects both $A$ and $X \setminus A$, then $C$ intersects $\Bd A$.
+
+\subsubsection{Solution}
+Let $P = \bar A \cap C$ and $Q = (\overline{X \setminus A}) \cap C$. $P$ and $Q$ are closed in $C$, and their union is $C$. $P$ and $Q$ are nonempty since $P$ intersects both $A$ and $X \setminus A$. Since $C$ is connected, they are not disjoint. So $P \cap Q = \bar A \cap \overline{X \setminus A} \cap C = \Bd A \cap C$ is nonempty.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{7} % 8
+\subsection{}
+
+\subsubsection{Problem}
+Determine whether or not $\R^\omega$ is connected in the uniform topology.
+
+\subsubsection{Solution}
+$\R^\omega$ in the uniform topology is not connected. Let $A, B \subseteq \R^\omega$ be the set of bounded and unbounded sequences respectively. $A$ and $B$ are nonempty, disjoint, and their union is $\R^\omega$. Let $d$ be the uniform metric. Then for all $x \in A$, $B(x, \frac12) \subseteq A$. And similarly for all $x \in B$, $B(x, \frac12) \subseteq B$. Thus $A$ and $B$ are open.
