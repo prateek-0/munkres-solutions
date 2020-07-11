@@ -45,3 +45,18 @@ X \times \{y\} &\textrm{, otherwise}
 \end{cases}
 \]
 $T_{x \times y}$ is indeed a subspace of $W$, because $x \notin A$ or $y \notin B$. $T_{x \times y}$ is homeomorphic to $X$ or $Y$, and so is connected.  Every $T_{x \times y}$ intersects $Z$, in $x \times y_0$ or $x_0 \times y$. Using Problem 3, the union of $Z$ with all the $T_{x\times y}$ is connected. This union is $W$, since every $x \times y$ in $W$ is in $T_{x \times y}$. Thus $W$ is connected.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 11 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{10} % 11
+\subsection{}
+
+\subsubsection{Problem}
+Let $p : X \to Y$ be a quotient map. Show that if each set $p^{-1}(\{y\})$ is connected, and if $Y$ is connected, then $X$ is connected.
+
+\subsubsection{Solution}
+Suppose $X = A \cup B$, with $A$ and $B$ disjoint and open. We will show that at least one of $A$ and $B$ is empty.
+
+For every $y \in Y$, $A \cap p^{-1}(\{y\})$ and $B \cap p^{-1}(\{y\})$ do not form a separation of $p^{-1}(\{y\})$, hence at least one of them is empty. So each $p^{-1}(\{y\})$ is a subset of $A$ or $B$. $A$ and $B$ are saturated with respect to $p$.
+
+$A$ and $B$ are open and saturated, so $p(A)$ and $p(B)$ are open in $Y$. Since $A$ and $B$ are disjoint and saturated, $p(A)$ and $p(B)$ are disjoint. $p(A) \cup p(B) = Y$. Since $Y$ is connected, $p(A)$ and $p(B)$ do not form a separation of $Y$. Thus at least one of $p(A)$ and $p(B)$ is empty, and so at least one of $A$ and $B$ is empty. This shows that $X$ does not have a separation.
