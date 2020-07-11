@@ -60,3 +60,33 @@ Suppose $X = A \cup B$, with $A$ and $B$ disjoint and open. We will show that at
 For every $y \in Y$, $A \cap p^{-1}(\{y\})$ and $B \cap p^{-1}(\{y\})$ do not form a separation of $p^{-1}(\{y\})$, hence at least one of them is empty. So each $p^{-1}(\{y\})$ is a subset of $A$ or $B$. $A$ and $B$ are saturated with respect to $p$.
 
 $A$ and $B$ are open and saturated, so $p(A)$ and $p(B)$ are open in $Y$. Since $A$ and $B$ are disjoint and saturated, $p(A)$ and $p(B)$ are disjoint. $p(A) \cup p(B) = Y$. Since $Y$ is connected, $p(A)$ and $p(B)$ do not form a separation of $Y$. Thus at least one of $p(A)$ and $p(B)$ is empty, and so at least one of $A$ and $B$ is empty. This shows that $X$ does not have a separation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 12 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{11} % 12
+\subsection{}
+
+\subsubsection{Problem}
+Let $Y \subseteq X$; let $X$ and $Y$ be connected. Show that if $A$ and $B$ form a separation of $X \setminus Y$, then $Y \cup A$ and $Y \cup B$ are connected.
+
+\subsubsection{Solution}
+First we prove the following lemma:
+\begin{lemma}
+Suppose $X$ is a space and $X = P \cup Q$. If $U \subseteq P \cap Q$ is open in both $P$ and $Q$, then it is open in $X$. The same holds with ``open'' replaced by ``closed''.
+\end{lemma}
+\begin{proof}
+Suppose $U$ is open in both $P$ and $Q$. Then there exists $P'$ and $Q'$ open in $X$ such that $U = P \cap P' = Q \cap Q'$. Then
+\begin{align*}
+P' \cap Q' &= (P' \cap Q') \cap X \\
+&= (P' \cap Q') \cap (P \cup Q) \\
+&= (P' \cap Q' \cap P) \cup (P' \cap Q' \cap Q) \\
+&= (U \cap Q') \cup (U \cap P') \\
+&= U \cup U \\
+&= U
+\end{align*}
+Thus $U = P' \cap Q'$ is open in $X$. The same proof works with ``open'' replaced by ``closed'' throughout.
+\end{proof}
+
+We now return to the problem. We will show that $Y \cup A$ is connected. The proof for $Y \cup B$ is similar. Suppose $C$ and $D$ form a separation of $Y \cup A$. Then since $Y$ is connected, $Y \subseteq C$ or $Y \subseteq D$. Without loss of generality, let's say $Y \subseteq C$. Since $Y \cup A = C \cup D$ and $C$ and $D$ are disjoint, we get $D \subseteq A$. $D$ is clopen in $Y \cup A$, so $D$ is clopen in $A$. $A$ is clopen in $X \setminus Y$, so $D$ is clopen in $X \setminus Y$ as well.
+
+$D$ is clopen in both $X \setminus Y$ and $Y \cup A$. Their union is $X$, so by the above lemma $D$ is clopen in $X$. $D$ is nonempty, and $X \setminus D$ is nonempty as well (because it includes $B$). Thus $D$ and $X \setminus D$ form a separation of $X$, which is a contradiction.
