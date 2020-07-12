@@ -1,0 +1,16 @@
+\setcounter{section}{23} % 24
+\section{Connected Subspaces of the Real Line}
+\label{sec-connected-subspaces-real}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{1} % 2
+\subsection{}
+
+\subsubsection{Problem}
+Let $f : S^1 \to \R$ be a continuous map. Show that there exists a point $x$ of $S^1$ such that $f(x) = f(-x)$.
+
+\subsubsection{Solution}
+Let $g : S^1 \to \R$ be defined by $g(x) = f(x) - f(-x)$. $g$ is continuous. Consider the image of $g$. If it is $\{0\}$, then we are done, because in fact for every $x \in S^1$, $f(x) = f(-x)$.
+
+Otherwise, for some $x \in S^1$, $g(x) \neq 0$. Then $g(-x) = -g(x)$. The image of $g$ in $\R$ contains a positive number and a negative number, and is connected (since $S^1$ is connected), so must contain $0$.
