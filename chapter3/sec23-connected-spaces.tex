@@ -87,6 +87,6 @@ P' \cap Q' &= (P' \cap Q') \cap X \\
 Thus $U = P' \cap Q'$ is open in $X$. The same proof works with ``open'' replaced by ``closed'' throughout.
 \end{proof}
 
-We now return to the problem. We will show that $Y \cup A$ is connected. The proof for $Y \cup B$ is similar. Suppose $C$ and $D$ form a separation of $Y \cup A$. Then since $Y$ is connected, $Y \subseteq C$ or $Y \subseteq D$. Without loss of generality, let's say $Y \subseteq C$. Since $Y \cup A = C \cup D$ and $C$ and $D$ are disjoint, we get $D \subseteq A$. $D$ is clopen in $Y \cup A$, so $D$ is clopen in $A$. $A$ is clopen in $X \setminus Y$, so $D$ is clopen in $X \setminus Y$ as well.
+We now return to the problem. We will show that $Y \cup A$ is connected. The proof for $Y \cup B$ is similar. Suppose $C$ and $D$ form a separation of $Y \cup A$. We will derive a contradiction. Since $Y$ is connected, $Y \subseteq C$ or $Y \subseteq D$. Without loss of generality, assume $Y \subseteq C$. Since $Y \cup A = C \cup D$ and $C$ and $D$ are disjoint, we get $D \subseteq A$. $D$ is clopen in $Y \cup A$, so $D$ is clopen in $A$. $A$ is clopen in $X \setminus Y$, so $D$ is clopen in $X \setminus Y$ as well.
 
 $D$ is clopen in both $X \setminus Y$ and $Y \cup A$. Their union is $X$, so by the above lemma $D$ is clopen in $X$. $D$ is nonempty, and $X \setminus D$ is nonempty as well (because it includes $B$). Thus $D$ and $X \setminus D$ form a separation of $X$, which is a contradiction.
