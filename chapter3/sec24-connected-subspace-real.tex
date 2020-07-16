@@ -14,3 +14,25 @@ Let $f : S^1 \to \R$ be a continuous map. Show that there exists a point $x$ of 
 Let $g : S^1 \to \R$ be defined by $g(x) = f(x) - f(-x)$. $g$ is continuous. Consider the image of $g$. If it is $\{0\}$, then we are done, because in fact for every $x \in S^1$, $f(x) = f(-x)$.
 
 Otherwise, for some $x \in S^1$, $g(x) \neq 0$. Then $g(-x) = -g(x)$. The image of $g$ in $\R$ contains a positive number and a negative number, and is connected (since $S^1$ is connected), so must contain $0$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{3} % 4
+\subsection{}
+
+\subsubsection{Problem}
+Let $X$ be an ordered set in the order topology. Show that if $X$ is connected, then $X$ is a linear continuum.
+
+\subsubsection{Solution}
+Let $x, y \in X$ with $x < y$. We show that there exists $z \in X$ such that $x < z < y$. Let $A = (-\infty, y)$ and $B = (x, \infty)$. $A$ and $B$ are open in $X$, and their union is $X$. They are both nonempty, because $x \in A$ and $y \in B$. Because $X$ is connected, $A$ and $B$ are not a separation of $X$, so they intersect. Let $z \in A \cap B$. Then $x < z < y$.
+
+Now we show that $X$ has the least upper bound property. Let $A \subseteq X$, such that $A$ is nonempty, and $A$ has an upper bound. Let $B$ be the set of upper bounds of $A$. $B$ is nonempty as well. We need to show that $A$ has a least upper bound. If $B$ has a minimum element, that is a least upper bound of $A$. Likewise if $A$ has a maximum element, then that is a least upper bound of $A$. Now we assume $A$ has no maximum and $B$ has no minimum, and derive a contradiction.
+
+Let $C = \bigcup_{x \in A} (-\infty, x)$. Then 
+\begin{itemize}
+\item $C$ is nonempty (in fact, $A \subseteq C$). $B$ is also nonempty.
+\item $C$ is open. $B$ is also open, because $B = \bigcup_{y \in B} (y, \infty)$.
+\item Every element of $C$ is not an upper bound of $A$, so $B$ and $C$ are disjoint.
+\item Suppose $y \in X$ such that $y \notin B$. Then since $y$ is not an upper bound of $A$, there is $x \in A$ such that $y < x$. So $y \in (-\infty, x) \subseteq C$. So $B \cup C = X$.
+\end{itemize}
+$B$ and $C$ form a separation of $X$, which is a contradiction.
