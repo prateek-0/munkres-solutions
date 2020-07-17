@@ -52,3 +52,20 @@ If $x_1 < x_2$, then
 \[x_1 \times t_1 <x_1 \times \tfrac{t_1+1}{2} <x_2 \times t_2\]
 
 Now we show that $X \times [0,1)$ has the least upper bound property. Let $\pi_1 : X \times [0,1) \to X$ be the projection onto the first component. Let $A \subseteq X \times [0,1)$ be nonempty and have an upper bound. Let $B \subseteq X$ be the set of upper bounds of $A$. $B$ is nonempty. We need to show that $B$ has a minimum element. $\pi_1(B)$ is a nonempty subset of $X$, and hence has a minumum element, say $b$. Consider $S \subseteq [0,1)$ defined by $S = \{t : b \times t \in B\}$. $S$ is nonempty, and has a lower bound of $0$, so has an infimum, say $s$. For every $t \in S$, $b \times t$ is an upper bound of $A$, so it is easy to see that $b \times s$ is an upper bound of $A$. $b \times s \in B$. $b \times s$ is the minimum element of $B$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 10 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{9} % 10
+\subsection{}
+
+\subsubsection{Problem}
+Show that if $U$ is an open connected subset of $\R^2$, then $U$ is path connected. [Hint: Show that given $x_0 \in U$, the set of points that can be joined to $x_0$ by a path in $U$ is both open and closed in $U$.]
+
+\subsubsection{Solution}
+Fix $x_0 \in U$. Let $A \subseteq U$ be the set of points $x$ of $U$ such that there exists a path connected subspace of $U$ containing both $x$ and $x_0$. We show that $A$ and $U \setminus A$ are both open.
+
+Suppose $x \in A$. Let $C \subseteq U$ be a path connected subspace of $U$ which contains both $x$ and $x_0$. Since $U$ is open, there exist open intervals $I_1$ and $I_2$ in $\R$ such that $x \in I_1 \times I_2 \subseteq U$. $I_1 \times I_2$ is path connected and has $x$. One can use the path connected space $C \cup (I_1 \times I_2)$ to get that $I_1 \times I_2 \subset A$. Thus $A$ is open.
+
+Now suppose $x \in U \setminus A$. Since $U$ is open, there exist open intervals $I_1$ and $I_2$ in $\R$ such that $x \in I_1 \times I_2 \subseteq U$. $I_1 \times I_2$ is path connected, and so if it intersects $A$, it must be a subset of $A$. But $x \in U \setminus A$, so $I_1 \times I_2 \subseteq U \setminus A$. $U \setminus A$ is open.
+
+$A$ and $U \setminus A$ form a partition of $U$, and both are open. $A$ is nonempty (because $x_0 \in A$), so $U \setminus A$ is nonempty. Thus $U = A$. $A$ is path connected, being the union of path connected spaces which all have a point ($x_0$) in common.
