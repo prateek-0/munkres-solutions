@@ -69,3 +69,45 @@ Suppose $x \in A$. Let $C \subseteq U$ be a path connected subspace of $U$ which
 Now suppose $x \in U \setminus A$. Since $U$ is open, there exist open intervals $I_1$ and $I_2$ in $\R$ such that $x \in I_1 \times I_2 \subseteq U$. $I_1 \times I_2$ is path connected, and so if it intersects $A$, it must be a subset of $A$. But $x \in U \setminus A$, so $I_1 \times I_2 \subseteq U \setminus A$. $U \setminus A$ is open.
 
 $A$ and $U \setminus A$ form a partition of $U$, and both are open. $A$ is nonempty (because $x_0 \in A$), so $U \setminus A$ is nonempty. Thus $U = A$. $A$ is path connected, being the union of path connected spaces which all have a point ($x_0$) in common.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 12 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{11} % 12
+\subsection{}
+
+\subsubsection{Problem}
+Recall that $S_\Omega$ denotes the minimal uncountable well-ordered set. Let $L$ denote the ordered set $S_\Omega \times [0,1)$ in the dictionary order, with its smallest element deleted. The set $L$ is a classical example in topology called the \emph{long line}.
+
+\begin{theorem}
+The long line is path connected and locally homeomorphic to $\R$, but it cannot be imbedded in $\R$.
+\end{theorem}
+\begin{enumerate}
+\item Let $X$ be an ordered set; let $a < b < c$ be the points of $X$. Show that $[a,c)$ has the order type of $[0,1)$ if and only if both $[a,b)$ and $[b,c)$ have the order type of $[0,1)$.
+\item Let $X$ be an ordered set. Let $x_0 < x_1 < \cdots$ be an increasing sequence of points of $X$; suppose $b = \sup \{x_i\}$. Show that $[x_0, b)$ has the order type of $[0,1)$ if and only if each interval $[x_i, x_{i+1})$ has the order type of $[0,1)$.
+\item Let $a_0$ denote the smallest element of $S_\Omega$. For each element $a$ of $S_\Omega$ different from $a_0$, show that the interval $[a_0 \times 0, a \times 0)$ has the order type of $[0,1)$. [Hint: Proceed by transfinite induction. Either $a$ has an immediate predecessor in $S_\Omega$, or there  is an increasing sequence $a_i$ in $S_\Omega$ with $a = \sup \{x_i\}$.
+\item Show that $L$ is path connected.
+\item Show that every point of $L$ has a neighbourhood homeomorphic with an interval in $\R$.
+\item Show that $L$ cannot be imbedded in $\R$, or indeed $\R^n$ for any $n$. [Hint: Any subspace of $\R^n$ has a countable basis for its topology.]
+\end{enumerate}
+\subsubsection{Solution}
+We call an ordered set \emph{good} if it has the order type of $[0,1)$. Note that in $\R$, if $p < q$, then $[p,q)$ is good.
+\begin{enumerate}
+\item If $[a,c)$ is good, then for some $p \in (0,1)$, $[a,b)$ and $[b,c)$ have the order type  of $[0,p)$ and $[p,1)$ respectively, and so both are good. Likewise, if $[a,b)$ and $[b,c)$ are good, then they have the same order type as  $[0,\frac12)$ and $[\frac12,1)$ respectively, and this can be combined to show that $[a,c)$ is good.
+
+\item \label{connected-subspaces-real-12-b} Suppose $[x_0, b)$ is good. Fix an order isomorphism between $[x_0, b)$ and $[0,1)$. Let $p_0 < p_1 < \cdots$ be elements in $[0,1)$ corresponding to $x_0 < x_1 < \cdots$. Then it's clear that each $[x_i, x_{i+1})$ is good. For the converse, suppose each $[x_i, x_{i+1})$ is good. For each $i$, fix an order isomorphism between $[x_i, x_{i+1})$ and $[1 - \frac{1}{i+1}, 1 - \frac{1}{i+2})$. In particular, $[x_0, x_1)$ maps to $[0, \frac12)$. Combining these order isomorphisms, one gets an order isomorphism between $[x_0,b)$ and $[0,1)$.
+
+\item Suppose $a \in S_\Omega$ with $a \neq a_0$, such that  for every $b < a$, $b = a_0$ or $[a_0 \times 0, b \times 0)$ is good. We have two cases:
+\begin{itemize}
+\item If $a$ has an immediate predecessor, say $a'$: If $a' = a_0$, then clearly $[a_0 \times 0, a \times 0)$ is good. Otherwise, $[a_0 \times 0, a' \times 0)$ is good by the induction hypothesis. $[a'\times 0, a \times 0)$ is $\{a'\} \times [0,1)$ and so is good too. Therefore $[a_0 \times 0, a \times 0)$ is good. 
+\item If $a$ has no immediate predecessor: Then $[a_0, a)$ is countable (since every section of $S_\Omega$ is countable). By enumerating this countable set and taking suitable prefix maxima, one can get a strictly sequence of elements in $S_\Omega$, $x_0 < x_1 < \cdots$ such that its supremum is $a$. One can assume $x_0 = a_0$. Then by the induction hypothesis, every $[a_0 \times 0, x_i \times 0)$ is good, for $i > 0$. Thus for any $z \in [a_0 \times 0, x_i \times 0)$, $[z, x_i \times 0)$ is good, and in particular $[x_{i-1} \times 0, x_i \times 0)$ is good. It is easy to see that the supremum of $\{x_i \times 0 : i \geq 0 \}$ is $a \times 0$. Thus using \ref{connected-subspaces-real-12-b}, $[a_0 \times 0, a \times 0)$ is good.
+\end{itemize}
+
+\item Consider any two points of $L$, $a \times x$ and $b \times y$. Since $S_\Omega$ has no maximum element, pick a $c \in S_\Omega$ such that $c > a$ and $c > b$. Then let $X \subseteq L$, $X = (-\infty, c \times 0)$. $X$ has the order type of $[0,1)$. Since $X$ is a convex subset of $L$, the subspace topology on $X$ is identical to the order topology on $X$, which in turn is identical to the order topology on $[0,1)$, which is identical to the topology on $[0,1)$ as a subspace of $\R$ with the standard topology. Since $[0,1)$ is path-connected, so is $X$. Thus there is a path in $X$ (and in $L$) between $a \times x$ and $b \times y$.
+
+\item Let $a \times x$ be any element of $L$. Since $S_\Omega$ has no maximum element, let $b \in S_\Omega$ be such that $b > a$. Then $(-\infty, b \times 0)$ is a neighbourhood of $a \times x$ which is homeomorphic to $[0,1)$ in $\R$. This uses the fact that for convex subsets of ordered sets, the induced subset topology is identical to the order topology.
+
+\item $\R$ has a countable basis consisting of all open intervals with rational endpoints. Thus every $\R^n$ has a countable basis too, formed by taking products of open intervals with rational endpoints. Every subspace of $\R^n$ has a countable basis, formed by intersecting a countable basis of $\R^n$ with it.
+
+Let $B$ be a basis of $L$. For every $a \in S_\Omega$, consider the nonempty open set in $L$ given by $(a \times 0, a \times \frac12)$. This must have as a subset some element of $B$. These elements of $B$ are distinct for distinct $a \in S_\Omega$. Since $S_\Omega$ is uncountable, $B$ is uncountable. $L$ has no countable basis, and so cannot be imbedded in $\R^n$.
+\end{enumerate}
+
