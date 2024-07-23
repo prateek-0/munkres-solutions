@@ -1,0 +1,20 @@
+\setcounter{section}{12} % 13
+\section{Basis for a Topology}
+\label{sec-topspace-basis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 1 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{0} % 1
+\subsection{}
+
+\subsubsection{Problem}
+Let $X$ be a topological space; let $A$ be a subset of $X$. Suppose that for each $x \in A$ there is an open set $U$ containing $x$ such that $U \subseteq A$. Show that $A$ is open in $X$.
+
+\subsubsection{Solution}
+Let us assume that for each $x \in A$, the open set $U_x$ is such that it contains $x$ and that $U_x \subseteq A$. Consider the set $U := \left( \bigcup_{x \in A}U_x \right)$. Since $X$ is a topological space, an arbitrary union of open sets is open. Hence as each $U_x$ is open, we get that $U$ is an open subset of $X$. We will prove that $U = A$. This will prove that $A$ is also open.
+
+($\supseteq$) Let $x \in A$. Then we know that $x \in U_x \subseteq \left( \bigcup_{x \in A}U_x \right) = U$, which implies that $A \subseteq U$.
+
+($\subseteq$) Since $U_x \subseteq A$ for all $x \in A$, we get that $U = \left( \bigcup_{x \in A}U_x \right) \subseteq A$.
+
+Hence we get that $U = A$, and by implication, $A$ is an open subset of $X$.
