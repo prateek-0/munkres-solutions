@@ -2,6 +2,26 @@
 \section{Closed Sets and Limit Points}
 \label{sec-topspace-closed}
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 1 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{0} % 1
+\subsection{}
+
+\subsubsection{Problem}
+Let $\mathcal{C}$ be a collection of subsets of the set $X$. Suppose that $\emptyset$ and $X$ are in $\mathcal{C}$, and that finite unions and arbitrary intersections of elements of $\mathcal{C}$ are in $\mathcal{C}$. Show that the collection
+\[ \T := \left\{ X-C \mid C \in \mathcal{C} \right\} \]
+is a topology on $X$.
+\subsubsection{Solution}
+Following the definition of a topology on a set, we see that
+\begin{enumerate}
+    \item $X \in \mathcal{C} \implies \emptyset = X-X \in \T$ and $\emptyset \in \mathcal{C} \implies X = X-\emptyset \in \T$.
+    \item Let $\T_0 := \{T_i \mid i \in I\}$ be a subcollection of elements in $\T$ where $I$ is some indexing set. Then for each set $T_i \in \T_0$ there exists a corresponding set $C_i \in \mathcal{C}$ such that $T_i := X - C_i$ for all $i \in I$. Since $\mathcal{C}$ is given to be closed under arbitrary intersections, there exists $C \in \mathcal{C}$ such that $C := \bigcap_{i \in I}C_i$. Then by De Morgan's Laws we get that
+    \[ \bigcup_{i \in I}T_i := \bigcup_{i \in I}(X-C_i) = X-\left( \bigcap_{i \in I}C_i \right)  = X-C \in \T \]
+    \item Let $\T_1 := \{ T_1, T_2, \dots, T_n \}$ be a finite subcollection of elements of $\T$ for some $n \in \N$. Then there exist sets $C_1, C_2, \dots, C_n \in \mathcal{C}$ such that $T_i := X-C_i$ for all $i \in [n]$. Since $\mathcal{C}$ is given to be closed under finite unions, there exists $C' \in \mathcal{C}$ such that $C' := C_1 \cup C_2 \cup \dots \cup C_n$. Then by De Morgan's Laws we get that
+    \[ \bigcap_{i=1}^n T_i := \bigcap_{i=1}^n (X-C_i) = X-\left( \bigcup_{i=1}^n C_i \right) = X-C' \in \T \]
+\end{enumerate}
+Since $\T$ satisfies all mentioned conditions, we conclude that $\T$ is a topology over $X$. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{1} % 2
@@ -35,6 +55,16 @@ Show that if $U$ is open in $X$ and $A$ is closed in $X$, then $U-A$ is open in 
 \subsubsection{Solution}
 By definition, we have $U$ open in $X \implies X\setminus U$ is closed in $X$ and $A$ closed in $X \implies X\setminus A$ is open in $X$. Since finite intersections of open sets are open, we have that $U-A := U \cap (X\setminus A)$ is open in $X$. Similarly, since arbitrary intersections of closed sets are closed, we have $A-U := A \cap (X\setminus U)$ is closed in $X$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 5 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{4} % 5
+\subsection{}
+
+\subsubsection{Problem}
+Let $X$ be an ordered set in the order topology. Show that $\overline{(a, b)} \subseteq [a, b]$. Under what conditions does equality hold?
+\subsubsection{Solution}
+\todo
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{5} % 6
@@ -55,6 +85,16 @@ Let $A$, $B$, and $A_\alpha$ denote subsets of a space $X$. Prove the following:
  
  For an example where equality fails, let $X = \R$ with the standard topology. Treating $\Q$ as an index set, let $A_\alpha = \{\alpha\}$ for $\alpha \in \Q$. Then $\overline{\bigcup A_\alpha} = \bar \Q = \R$. And $\bigcup \overline{A_\alpha} = \Q$.
  \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 7 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{6} % 7
+\subsection{}
+
+\subsubsection{Problem}
+Criticize the following ``proof'' that $\overline{\bigcup A_\alpha} \subseteq \bigcup \overline{A_\alpha}$: if $\{A_\alpha\}$ is a collection of sets in $X$ and if $x \in \overline{\bigcup A_\alpha}$, then every neighbourhood $U$ of $x$ intersects $\bigcup A_\alpha$. Thus $U$ must intersect some $A_\alpha$, so that $x$ must belong to the closure of some $A_\alpha$. Therefore, $x \in \bigcup \overline{A_\alpha}$.
+\subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%%%%%%%
  
@@ -89,6 +129,36 @@ Let $A \subseteq X$ and $B \subseteq Y$. Show that in the space $X \times Y$,
 \subsubsection{Solution}
 $A \times B$ is a subset of the closed set $\bar A \times \bar B$, and so $\overline{A \times B} \subseteq \bar A \times \bar B$. Conversely, let $x \times y \in \bar A \times \bar B$. Consider any basis neighbourhood of it in $X \times Y$, $U \times V$. Then $U$ intersects $A$ and $V$ intersects $B$, so $U \times V$ intersects $A \times B$. So $x \times y \in \overline{A \times B}$. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 10 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{9} % 10
+\subsection{}
+
+\subsubsection{Problem}
+Show that every order topology is Hausdorff.
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 11 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{10} % 11
+\subsection{}
+
+\subsubsection{Problem}
+Show that the product of two Hausdorff spaces is Hausdorff.
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 12 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{11} % 12
+\subsection{}
+
+\subsubsection{Problem}
+Show that a subspace of a Hausdorff space is Hausdorff.
+\subsubsection{Solution}
+\todo
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 13 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{12} % 13
@@ -105,6 +175,16 @@ Let $\T$ be the toplogy on $X$ and let $\Omega = (X \times X) \setminus \Delta$.
 \iff& \Omega \textrm{ is open} \\
 \iff& \Delta \textrm{ is closed}
 \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 14 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{13} % 14
+\subsection{}
+
+\subsubsection{Problem}
+In the finite complement topology on $\R$, to what point or points does the sequence $x_n := 1/n$ converge?
+\subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 15 %%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -126,12 +206,53 @@ Clearly, singleton sets are finite which gives us that $\ref{t1} \implies \ref{1
 
 To show that $\ref{1t1} \implies \ref{nbds}$, let $x,y \in X, x \neq y$. $\ref{1t1}$ implies that $\set{x}, \set{y}$ are closed sets. Hence $X\setminus\set{x}, X\setminus\set{y}$ are open sets containing $y, x$ respectively. Also, $x \notin X\setminus\set{x}, y \notin X\setminus\set{y}$. Since $x, y$ were arbitrary points in $X$, we see that \ref{nbds} holds. Conversely, let $x_0 \in X$. \ref{nbds} implies that for all $y \in X, y \neq x_0$ there exists a neighbourhood $U_y$ of $y$ which does not contain $x_0$. Let $U := \bigcup_{y \in X\setminus\set{x_0}}U_y$. Then $U$ is open, being the union of open sets $U_y$ for $y \in X\setminus\set{x_0}$. Also, $U$ does not contain $x_0$, since $x_0 \notin U_y$ for all $y \in X\setminus\set{x_0}$. Finally for any $y \in X, y \neq x_0$ we have $y \in U_y \subseteq U$. Hence $U = X\setminus\set{x_0}$ is an open set which implies that $\set{x_0}$ is closed. Since $x_0 \in X$ was arbitrary, we conclude that $\ref{nbds} \implies \ref{1t1}$. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%% 16 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{15} % 16
+\subsection{}
+
+\subsubsection{Problem}
+Consider the five topologies on $\R$ given in Exercise 7 of \S 13.
+\begin{enumerate}
+    \item Determine the closure of the set $K := \{ 1/n \mid n \in \Z_+ \}$ under each of these topologies.
+    \item Which of these topologies satisfy the Hausdorff axiom? The $T_1$ axiom?
+\end{enumerate}
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 17 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{16} % 17
+\subsection{}
+
+\subsubsection{Problem}
+Consider the lower limit topology on $\R$ and the topology given by the basis $\mathcal{C}$ of Exercise 8 of \S 13. Determine the closures of the intervals $A := (0, \sqrt{2})$ and $B := (\sqrt{2}, 3)$ in these two topologies.
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 18 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{17} % 18
+\subsection{}
+
+\subsubsection{Problem}
+Determine the closures of the following subsets of the ordered square:
+\begin{eqnarray*}
+    A & := & \{ (1/n) \times 0 \mid n \in \Z_+ \},\\
+    B & := & \{ (1-1/n) \times \tfrac12 \mid n \in \Z_+ \},\\
+    C & := & \{ x \times 0 \mid 0 < x < 1 \},\\
+    D & := & \{ x \times \tfrac12 \mid 0 < x < 1 \},\\
+    E & := & \{ \tfrac12 \times y \mid 0 < y < 1 \}.
+\end{eqnarray*}
+\subsubsection{Solution}
+\todo
+
 %%%%%%%%%%%%%%%%%%%%%%%%% 19 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{subsection}{18} % 19
 \subsection{}
 \subsubsection{Problem}
-If $A \subseteq X$, we define the boundary of $A$ by the equation
+If $A \subseteq X$, we define the \emph{boundary} of $A$ by the equation
 \[\Bd A = \bar A \cap \overline{X \setminus A}\]
 \begin{enumerate}
 \item Show that $\Int A$ and $\Bd A$ are disjoint, and $\bar A = \Int A \cup \Bd A$.
@@ -160,4 +281,36 @@ Conversely, if $A$ is both open and closed, then $X \setminus A$ is closed as we
 
 \item No. Let $X = \R$ with the standard topology, and let $U = (0,1) \cup (1,2)$.
 \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 20 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{19} % 20
+\subsection{}
+
+\subsubsection{Problem}
+Find the boundary and the interior of each of the following subsets of $\R^2$:
+\begin{enumerate}
+    \item $A := \{ x \times y \mid y = 0 \}$
+    \item $B := \{ x \times y \mid x > 0, y \neq 0 \}$
+    \item $C := A \cup B$
+    \item $D := \{ x \times y \mid x \in \Q \}$
+    \item $E := \{ x \times y \mid 0 < x^2-y^2 \leq 1 \}$
+    \item $F := \{ x \times y \mid x \neq 0, y \leq 1/x \}$
+\end{enumerate}
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 21 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{20} % 21
+\subsection{}
+
+\subsubsection{Problem}
+(Kuratowski) Consider the collection of all subsets $A$ of the topological space $X$. The operations of closure $A \to \overline{A}$ and complementation $A \to X-A$ are functions from this collections to itself.
+\begin{enumerate}
+    \item Show that starting with a given set $A$, one can form no more than 14 distinct sets by applying these two operations successively.
+    \item Find a subset $A$ of $\R$ (in its usual topology) for which the maximum of 14 is obtained.
+\end{enumerate}
+\subsubsection{Solution}
+\todo
 
