@@ -4,52 +4,159 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 1 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{0} % 1
 \subsection{}
 
 \subsubsection{Problem}
+Prove that for functions $f : \R \to \R$, the $\epsilon$-$\delta$ definition of continuity implies the open set definition.
 
 \subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{1} % 2
 \subsection{}
 
 \subsubsection{Problem}
+Suppose that $f : X \to Y$ is continuous. If $x$ is a limit point of the subset $A$ of $X$, is it necessarily true that $f(x)$ is a limit point of $f[A]$?
 
 \subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 3 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{2} % 3
 \subsection{}
 
 \subsubsection{Problem}
+Let $X$ and $X'$ denote a single set in the two topologies $\T$ and $\T'$ respectively. Let $i : X \to X'$ be the identity function. 
+\begin{enumerate}
+    \item Show that $i$ is continuous $\iff$ $\T'$ is finer than $\T$.
+    \item Show that $i$ is a homeomorphism $\iff \T' = \T$.
+\end{enumerate}
 
 \subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{3} % 4
 \subsection{}
 
 \subsubsection{Problem}
+Given $x_0 \in X$ and $y_0 \in Y$, show that the maps $f : X \to X \times Y$ and $g : Y \to X \times Y$ defined by
+\[ f(x) := x \times y_0 ~~~~~\mbox{ and }~~~~~ g(y) := x_0 \times y \]
+are imbeddings.
 
 \subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 5 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{4} % 5
 \subsection{}
 
 \subsubsection{Problem}
+Show that the subspace $(a, b)$ of $\R$ is homeomorphic with $(0, 1)$ and the subspace $[a, b]$ of $\R$ is homeomorphic with $[0, 1]$.
 
 \subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{subsection}{5} % 6
+\subsection{}
+
+\subsubsection{Problem}
+Find a function $f : \R \to \R$ that is continuous at precisely one point.
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 7 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+\begin{enumerate}
+    \item Suppose that $f : \R \to \R$ is ``continuous from the right'', that is,
+    \[ \lim_{x \to a^+}f(x) = f(a) \]
+    for each $a \in \R$. Show that $f$ is continuous when considered as a function from $\R_\ell$ to $\R$.
+    \item Can you conjecture what functions $f : \R \to \R$ are continuous when considered as maps from $\R$ to $\R_\ell$? As maps from $\R_\ell$ to $\R_\ell$? We shall return to this question in Chapter 3.
+\end{enumerate}
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Let $Y$ be an ordered set in the order topology. Let $f, g : X \to Y$ be continuous.
+\begin{enumerate}
+    \item Show that the set $\{ x \mid f(x) \leq g(x) \}$ is closed in $X$.
+    \item Let $h : X \to Y$ be the function $h(x) := \min\{ f(x), g(x) \}$. Show that $h$ is continuous.
+\end{enumerate}
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 9 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Let $\{ A_\alpha \}$ be a collection of subsets of $X$; let $X = \bigcup_\alpha A_\alpha$. Let $f : X \to Y$; suppose that $f \mid A_\alpha$ is continuous for each $\alpha$.
+\begin{enumerate}
+    \item Show that if the collection $\{A_\alpha\}$ is finite and each $A_\alpha$ is closed, then $f$ is continuous.
+    \item Find an example where the collection $\{A_\alpha\}$ is countable and each $A_\alpha$ is closed, but $f$ is not continuous.
+    \item An indexed family of sets $\{A_\alpha\}$ is said to be \textbf{locally finite} if each point $x$ of $X$ has a neighbourhood that intersects $A_\alpha$ for only finitely many values of $\alpha$. Show that if the family $\{A_\alpha\}$ is locally finite and each $A_\alpha$ is closed, then $f$ is continuous.
+\end{enumerate}
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 10 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Let $f : A \to B$ and $g : C \to D$ be continuous functions. Let us define a map $f \times g : A \times C \to B \times D$ by the equation
+\[ (f \times g)(a \times c) := f(a) \times g(c),~ \forall a \in A, c \in C \]
+Show that $f \times g$ is continuous.
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 11 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Let $F : X \times Y \to Z$. We say that $F$ is \textbf{continuous in each variable separately} if for each $y_0$ in $Y$, the map $h : X \to Z$ defined by $h(x) := F(x \times y_0)$ is continuous, and for each $x_0$ in $X$, the map $k : Y \to Z$ defined by $k(y) := F(x_0 \times y)$ is continuous. Show that if $F$ is continuous, then F is continuous in each variable separately.
+
+\subsubsection{Solution}
+\todo
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 12 %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{}
+
+\subsubsection{Problem}
+Let $F : \R \times \R \to \R$ be defined by the equation
+\[ F(x \times y) := 
+\left\{ \begin{array}{ll}
+    xy/(x^2+y^2) & \mbox{ if } x \times y \neq 0 \times 0 ; \\
+    0 & \mbox{ if } x \times y = 0 \times 0.
+\end{array} \right. \]
+\begin{enumerate}
+    \item Show that $F$ is continuous in each variable separately.
+    \item Compute the function $g : \R \to \R$ defined by $g(x) := F(x \times x)$ for all $x \in \R$.
+    \item Show that $F$ is not continuous.
+\end{enumerate}
+
+\subsubsection{Solution}
+\todo
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 13 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setcounter{subsection}{12} % 13
 \subsection{}
 
 \subsubsection{Problem}
