@@ -70,7 +70,24 @@ Show that the subspace $(a, b)$ of $\R$ is homeomorphic with $(0, 1)$ and the su
 Find a function $f : \R \to \R$ that is continuous at precisely one point.
 
 \subsubsection{Solution}
-\todo
+Consider the function $f : \R \to \R$ defined by
+\[
+    f(x) := \left\{ \begin{array}{ll}
+        x & \mbox{ if } x \in \Q, \\
+        0 & \mbox{ if } x \in \Q' := \R\setminus\Q.
+    \end{array} \right.
+\]
+We claim that this function is only continuous at $x = 0$ and nowhere else. Since we know from Problem 1 that the $\epsilon$-$\delta$ definition of continuity is equivalent to the open set definition, we will use the former to show that $f$ is continuous.
+
+To show that $f$ is continuous at 0, let $\epsilon > 0$ be given. Pick $\delta := \tfrac{\epsilon}{2}$. Then we see that for all $x \in B_\delta(0) \cap \Q$ we have $|f(x)| = |x| < \delta < \epsilon$. Also for all $x \in B_\delta(0) \cap \Q'$ we have $|f(x)| = 0 < \epsilon$. Hence we see that $f$ is continuous at 0.
+
+We show that $f$ is not continuous at any other point by contradiction. If possible let $f$ be continuous at $0 \neq x_0 \in \R$. Choose $\epsilon := \tfrac{x_0}{3} > 0$.
+
+If $x_0 \in \Q$, then we have $f(x_0) = x_0$. For this $\epsilon$, there exists $\delta > 0$ such that for all $x \in (x_0-\delta, x_0+\delta)$, $f(x) \in (x_0-\epsilon, x_0+\epsilon) = \left( \tfrac{2x_0}{3}, \tfrac{4x_0}{3} \right)$. But since we know that $\Q'$ is dense in $\R$, there exists $q' \in \Q'$ such that $q' \in (x_0-\delta, x_0+\delta) \implies 0 = f(q') \in \left( \tfrac{2x_0}{3}, \tfrac{4x_0}{3} \right)$, a contradiction.
+
+Similarly if $x_0 \in \Q'$, we have $f(x_0) := 0$. For this $\epsilon$, there exists $\delta > 0$ such that for all $x \in (x_0-\delta, x_0+\delta)$, $f(x) \in (-\epsilon, \epsilon) = \left( -\tfrac{x_0}{3}, \tfrac{x_0}{3} \right)$. But since we know that $\Q$ is dense in $\R$, there exists $q \in Q$ such that $q \in (x_0-\delta, x_0+\delta) \cap (x_0-\epsilon, x_0+\epsilon)$. Then we have that $q = f(q) \in \left( -\tfrac{x_0}{3}, \tfrac{x_0}{3} \right)$, which contradicts the fact that $q \in (x_0-\epsilon, x_0+\epsilon) = \left( \tfrac{2x_0}{3}, \tfrac{4x_0}{3} \right)$.
+
+Hence $f$ is not continuous at any point in $\R$ except $0$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 7 %%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -144,11 +161,13 @@ Let $F : X \times Y \to Z$. We say that $F$ is \textbf{continuous in each variab
 
 \subsubsection{Problem}
 Let $F : \R \times \R \to \R$ be defined by the equation
-\[ F(x \times y) := 
+\[
+F(x \times y) := 
 \left\{ \begin{array}{ll}
     xy/(x^2+y^2) & \mbox{ if } x \times y \neq 0 \times 0 ; \\
     0 & \mbox{ if } x \times y = 0 \times 0.
-\end{array} \right. \]
+\end{array} \right.
+\]
 \begin{enumerate}
     \item Show that $F$ is continuous in each variable separately.
     \item Compute the function $g : \R \to \R$ defined by $g(x) := F(x \times x)$ for all $x \in \R$.
