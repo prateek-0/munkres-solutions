@@ -10,7 +10,7 @@
 Prove that for functions $f : \R \to \R$, the $\epsilon$-$\delta$ definition of continuity implies the open set definition.
 
 \subsubsection{Solution}
-\todo
+Let us assume that $f$ is continuous by the $\epsilon$-$\delta$ definition of continuity. Let $V$ be an open set in $\R$. We need to show that $f^{-1}[V]$ is also open in $\R$. Let $x_0 \in f^{-1}[V] \implies f(x_0) \in V$. Since $V$ is open, there exists an interval $(a, b)$ such that $f(x_0) \in (a, b) \subseteq V$. Choose $\epsilon := \min\{\tfrac{x_0-a}{2}, \tfrac{b-x_0}{2}\}$. By the $\epsilon$-$\delta$ definition, there exists $\delta > 0$ such that for all $x$ such that $|x-x_0| < \delta$ we have that $|f(x)-f(x_0)| < \epsilon$. This implies that $f[(x-\delta, x+\delta)] \subseteq (f(x)-\epsilon, f(x)+\epsilon) \subseteq V$. Hence for each $x$ in $f^{-1}[V]$, there exists an open set $U_x := (x-\delta, x+\delta)$ such that $x \in (x-\delta, x+\delta) \subseteq f^{-1}[V]$. By Chapter 2, \S 13, Problem 1 we conclude that $f^{-1}[V]$ is open in $\R$. Hence we get that $f$ is continuous by the open set definition of continuity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%
 
