@@ -27,14 +27,17 @@ The above statement is not true. Consider $f : \R \to \R$ given by $f(x) \equiv 
 \subsection{}
 
 \subsubsection{Problem}
-Let $X$ and $X'$ denote a single set in the two topologies $\T$ and $\T'$ respectively. Let $i : X \to X'$ be the identity function. 
+Let $X$ and $X'$ denote a single set in the two topologies $\T$ and $\T'$ respectively. Let $i : X' \to X$ be the identity function. 
 \begin{enumerate}
     \item Show that $i$ is continuous $\iff$ $\T'$ is finer than $\T$.
     \item Show that $i$ is a homeomorphism $\iff \T' = \T$.
 \end{enumerate}
 
 \subsubsection{Solution}
-\todo
+\begin{enumerate}
+    \item We have that $i$ is continuous $\iff$ $A = i^{-1}[A] \in \T'$ for every open set $A \in \T \iff \T \subseteq \T' \iff \T'$ is finer than $\T$.
+    \item Using the result in part (a) and the fact that $i$ is already a bijection, we have that $i$ is a homeomorphism $\iff$ $i : X' \to X, i^{-1} : X \to X'$ are both continuous $\iff$ $\T'$ is finer than $\T$ and $\T$ is finer than $\T' \iff \T' = \T$.
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% 4 %%%%%%%%%%%%%%%%%%%%%%%%%
 
